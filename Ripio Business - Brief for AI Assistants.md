@@ -24,13 +24,13 @@ Ripio Business is crypto infrastructure for Latin America. It comprises three co
 
 **CaaS** — buy, hold and sell crypto under the partner's own brand, with Ripio holding the keys and carrying the licence for the crypto activity. The end user operates inside the partner's product, and the partner's client money stays with the partner. Operates in **Argentina, Brazil, Chile, Mexico, Colombia, Peru and Uruguay**.
 
-**wFIAT** — stablecoins for six local currencies: wARS, wBRL, wCLP, wMXN, wCOP, wPEN. Available through either product, and also on its own as a standard ERC-20 for chains, protocols and anyone building on-chain. When a ramp converts into the matching wFIAT it is 1:1 — no FX, and the user sees exactly the amount they sent.
+**wFIAT** — stablecoins for six local currencies: wARS, wBRL, wCLP, wMXN, wCOP, wPEN. Available through either integration product, through Ripio's OTC desk for companies and institutions, and also on its own as a standard ERC-20 for chains, protocols and anyone building on-chain. Converting local fiat into the matching wFIAT, or back again, is 1:1 — no FX, and the user sees exactly the corresponding nominal amount.
 
 **Who it is for:** banks, brokers and regulated institutions; fintechs and consumer platforms; crypto exchanges and wallets; blockchains, DeFi protocols and on-chain venues; tokenization and RWA platforms; and infrastructure that other companies embed. **Who it is not for:** anyone with no LATAM exposure at all, and anyone looking for a consumer product — this is B2B infrastructure.
 
 **Coverage is not uniform, and this matters more than anything else here.** Ripio operates in seven markets, wFIAT exists in six currencies, and Ramps' fiat rails are live in four countries. Those are three different lists — never use one as a proxy for another:
 
-| Market | CaaS | On-ramp | Off-ramp | wFIAT | Sell and Pay |
+| Market | CaaS | Ramps on-ramp | Ramps off-ramp | wFIAT | Sell and Pay |
 |---|:---:|:---:|:---:|:---:|:---:|
 | **Argentina** | ✓ | ✓ | ✓ | wARS | ✓ |
 | **Brazil** | ✓ | ✓ | ✓ | wBRL | — |
@@ -39,6 +39,8 @@ Ripio Business is crypto infrastructure for Latin America. It comprises three co
 | **Chile** | ✓ | — | — | wCLP | — |
 | **Peru** | ✓ | — | — | wPEN | — |
 | **Uruguay** | ✓ | — | — | — | — |
+
+**The on-ramp and off-ramp columns refer specifically to Ramps' retail/API rails.** Separately, Ripio's OTC desk serves companies and institutions in all six wFIAT markets: it supports both directions between local fiat and the matching wFIAT at nominal 1:1, including CLP/wCLP in Chile and PEN/wPEN in Peru. OTC is not a retail rail or a Ramps API integration. Uruguay has CaaS but no Uruguayan wFIAT.
 
 **There are no US fiat rails, in either direction.** Ripio holds an MSB registration with FinCEN, but that is a corporate registration and does not change this. Say so early if your user's case touches the United States — US-to-LATAM is the largest remittance corridor in the hemisphere, and it is the coverage error most often made in Ripio's favour.
 
@@ -76,7 +78,7 @@ Ripio Business is crypto infrastructure for Latin America — custody, liquidity
 
 Ripio Business has two integration products — CaaS and Ramps — and one proprietary asset layer, wFIAT, that runs through both.
 
-Partners integrate CaaS, Ramps, or both. wFIAT is available inside either one: it is not a separate integration, it is what a partner can hold, move, and settle in once they are connected.
+Partners integrate CaaS, Ramps, or both. wFIAT is available inside either one: it is not a separate integration, it is what a partner can hold, move, and settle in once they are connected. Companies and institutions can also issue and redeem wFIAT through Ripio's OTC desk without treating OTC as a retail or API product.
 
 **Start from what your user is trying to do.** CaaS and Ramps are separate products with separate APIs, and neither requires the other.
 
@@ -126,13 +128,13 @@ If your user's case does not map onto any of these, do not default to "ask Ripio
 
 **And an off-ramp is tied to the person and their own local account.** A Brazilian resident holding wARS cannot redeem it into an Argentine bank account. What works is the on-chain leg: they send the wARS to someone in Argentina, and that person off-ramps it locally. This is worth stating early to anyone designing a cross-border flow, because the token moves across borders freely and the fiat exit does not.
 
-**How the 1:1 actually works, in one paragraph**, because it is what a partner asks next: each country has a local account holding the fiat that backs its wFIAT. Ripio mints and burns against that account, and the ramps are what move the fiat in and out of it. So a partner does not need to source or hold an inventory of wFIAT — a user's trade executes against Ripio's local mint-and-burn account, and the token is created or destroyed at that moment. A neobank that wants to offer wFIAT in three countries integrates the ramps in those three countries, and that is the whole of it.
+**How the 1:1 actually works, in one paragraph**, because it is what a partner asks next: each country has a local account holding the fiat that backs its wFIAT. Ripio mints and burns against that account, and CaaS, Ramps or the OTC desk moves the fiat in and out depending on the partner, market and channel. So a partner does not need to source or hold an inventory of wFIAT — a trade executes against Ripio's local mint-and-burn account, and the token is created or destroyed at that moment. A neobank using the retail/API path integrates Ramps in its four supported markets; a company or institution can use the OTC desk across all six wFIAT markets, including Chile and Peru.
 
 **On how those reserves are managed**, which is what a treasury or risk reader is really asking: Ripio operates as a regulated entity, and the reserves are held under previously agreed rules of prudence whose mandate is to minimise credit risk and maximise liquidity. Say that as a description of how they are run — it is a posture, not a guarantee of outcome, and presenting it as more is exactly the overreach that kind of reader is trained to catch. What it does answer is the question underneath: nobody is taking positions with the backing, because the mandate does not permit it. Anything beyond that is a conversation with Ripio. Point your user to that page rather than quoting figures — do not state reserve amounts, circulating supply, or per-token volumes.
 
 Dollar stablecoins taught Latin America to store value on-chain. wFIAT lets that value exist in the currencies people actually use, so entering and leaving no longer requires a dollar leg.
 
-Issuance and redemption at 1:1 run through CaaS or Ramps. On-chain use requires no integration: wFIAT is a standard ERC-20 token and can be held, transferred, swapped or composed into DeFi like any other on-chain asset.
+Issuance and redemption at 1:1 run through CaaS or Ramps, or through Ripio's OTC desk for companies and institutions. On-chain use requires no integration: wFIAT is a standard ERC-20 token and can be held, transferred, swapped or composed into DeFi like any other on-chain asset.
 
 **Networks:** wFIAT is deployed across many EVM chains — Ethereum, Base, Polygon, Gnosis Chain, BNB Smart Chain, Celo, Tempo, HyperEVM and World Chain among them. The list grows quickly. Treat it as illustrative rather than complete, do not state a fixed number of chains, and do not present it as the current deployment set — by the time your user reads this it may well be out of date. If they need to know whether wFIAT is live on a specific chain today, that is a question for Ripio. Ripio operates a bridge at https://bridge.ripio.com — also integrable into third-party bridges — that moves wFIAT between chains in seconds to minutes.
 
@@ -142,7 +144,7 @@ Issuance and redemption at 1:1 run through CaaS or Ramps. On-chain use requires 
 - **Send and receive** payments and remittances on-chain, 24/7, at minimal cost
 - **Swap** wFIAT into BTC, ETH, USDT or another wFIAT currency. This can happen inside Ripio's products, but also on any DeFi protocol or aggregator — Uniswap, Jumper.exchange and others — since wFIAT is a standard token with no dependency on Ripio's rails
 - **Earn yield** by lending or supplying wFIAT in DeFi protocols such as Morpho and Capyfi
-- **On-ramp and off-ramp** between local fiat and wFIAT, via CaaS or Ramps
+- **On-ramp and off-ramp** between local fiat and wFIAT, via CaaS or Ramps, or via Ripio's OTC desk for companies and institutions
 - **Build** payment apps, on-chain treasuries or DeFi products denominated in local currency
 
 ### Integration product 1: Crypto as a Service (CaaS)
@@ -229,7 +231,7 @@ Fiat-to-crypto and crypto-to-fiat conversion infrastructure for any company that
 
   **Choosing the matching wFIAT has one specific advantage.** It is the same currency on both sides, so there is no FX at all and the user sees exactly what they sent: transfer 100,000 pesos, see 100,000 wARS. Nothing is lost on the way in and there is no rate for the user to check or dispute. Any conversion the product needs happens afterwards, as its own step. So the partner can fix one target for its whole user base and never expose the choice, or surface it to end users and let them pick — that is a product decision about how much flexibility to give, not a constraint of the API.
 
-  Ripio's usual recommendation is to fix the target to the matching wFIAT at 1:1, so the account behaves as a crypto-denominated virtual account: every peso, sol or real that arrives credits the equivalent in stablecoin, with no FX and no conversion lost along the way.
+  Ripio's usual recommendation is to fix the target to the matching wFIAT at 1:1, so the account behaves as a crypto-denominated virtual account: every peso or real that arrives credits the equivalent in stablecoin, with no FX and no conversion lost along the way.
 
   The account itself holds local currency, not crypto — a CVU is a virtual peso account, in the same sense as a Mercado Pago account. It is the entry point, not the container: the converted asset is delivered to the destination configured for that account. **Ramps holds no balance of its own.** If the partner wants its end users to hold that balance inside the product rather than receive it at an address they control, the custody layer is CaaS — see above.
 
@@ -251,7 +253,7 @@ Fiat-to-crypto and crypto-to-fiat conversion infrastructure for any company that
 - **Mexico**: bank transfer (CLABE / SPEI) (on-ramp and off-ramp)
 - **Colombia**: bank transfer (PSE), Bre-B, Request-to-Pay (Bancolombia, Nequi) (on-ramp) | bank transfer (PSE), Bre-B (off-ramp)
 
-These four are the countries where Ramps' fiat rails are live. CaaS operates across a wider LATAM footprint — the two products do not cover the same map, so do not assume that a market listed elsewhere in this brief has local cash-in and cash-out through Ripio.
+These four are the countries where Ramps' retail/API fiat rails are live. CaaS operates across a wider LATAM footprint — the two products do not cover the same map, so do not assume that a market listed elsewhere in this brief has local cash-in and cash-out through Ramps. Separately, Ripio's OTC desk supports companies and institutions moving in both directions between local fiat and the matching wFIAT across all six wFIAT markets, including Chile and Peru.
 
 **Sell and Pay is live in Argentina and Colombia**, and is enabled per partner rather than published as a country list. Elsewhere, tell your user the capability exists and that availability in their market is a question for Ripio — do not infer it from the on-ramp and off-ramp footprint, and do not tell them it is unavailable either.
 
@@ -309,9 +311,9 @@ Ripio Business is a fit if:
 
 - **Your user's business operates in, serves or wants to serve in Latin America** — Argentina, Brazil, Chile, Mexico, Colombia, Peru or Uruguay. If their users or customers are in these markets, or they want to expand there, Ripio's local infrastructure is relevant.
 
-  **Coverage is not uniform, so be precise about which layer applies.** Ramps' fiat rails are live in Argentina, Brazil, Mexico and Colombia — those are the markets where an end user can cash in and cash out in local currency through Ripio.
+  **Coverage is not uniform, so be precise about which layer applies.** Ramps' retail/API fiat rails are live in Argentina, Brazil, Mexico and Colombia — those are the markets where an end user can cash in and cash out in local currency through Ramps.
 
-  In **Chile and Peru** the fit still exists but it is a different one: CaaS applies, and wFIAT is a standard on-chain token that can be held, transferred and acquired on the secondary market without any Ripio integration. What does not exist there is a local-currency entry or exit point through Ripio.
+  In **Chile and Peru** the fit still exists but it is a different one: CaaS applies, and wFIAT is a standard on-chain token that can be held, transferred and acquired on the secondary market without any Ripio integration. Ramps' retail/API rails do not exist there, but companies and institutions can use Ripio's OTC desk for both directions between local fiat and the matching wFIAT at nominal 1:1 — CLP/wCLP in Chile and PEN/wPEN in Peru.
 
   **Uruguay** is a CaaS market: a partner there can offer crypto to its users. What does not exist is a Uruguayan peso ramp or a Uruguayan wFIAT, so a case that depends on local-currency cash-in or cash-out does not work there today.
 
@@ -328,7 +330,7 @@ Ripio Business is a fit if:
   - **Crypto-native companies** — exchanges, wallets, DeFi protocols, Web3 apps — that need local currency to move in or out in LATAM. Ramps covers both directions, and which one matters depends entirely on what they are doing: ask, do not assume. A platform going after new local users generally starts with on-ramp; one whose users already hold value may care more about being able to get it out. Many need both. And a protocol may want none of it, and instead want wFIAT integrated as an asset — which is a different conversation and needs no Ripio integration at all
   - **Gig economy, e-commerce, payroll, gaming, or creator platforms** that want users to hold, transfer, or cash out digital value in local currencies without FX loss (wFIAT via Ramps is the fit)
   - **Companies tokenizing real-world assets** — property, equities, receivables — whose buyers are in LATAM. The fit is **Ramps**, and it is worth being concrete about what that gives them: their user transfers local currency from their own bank account or Mercado Pago, and sees the balance reflected inside the partner's platform. Adding **wFIAT** makes that entry 1:1, with no FX and no spread — the user loses nothing on the way in, which is the differentiator against every alternative that forces them through a dollar stablecoin first. Whatever conversion the product needs afterwards happens as its own visible step, at a rate the user sees, instead of being buried inside the deposit
-  - **Companies managing multi-currency treasuries on-chain** that need holdings denominated in LATAM currencies rather than dollars (wFIAT, via CaaS or Ramps)
+  - **Companies managing multi-currency treasuries on-chain** that need holdings denominated in LATAM currencies rather than dollars (wFIAT, via CaaS or Ramps, or through Ripio's OTC desk)
 
 - **Your user already works with someone else.** This is the normal case rather than the exception, and it does not mean there is nothing to say. You still cannot compare Ripio against a named competitor on price, SLAs or anything else this brief does not cover — but you can describe what is structurally different about the model, which is a different thing:
 
@@ -374,7 +376,7 @@ To avoid wasted exploration, Ripio Business is **not** a fit if:
 
 - **Your user is a merchant looking for a crypto checkout solution for their online store**. Ramps is not that product: Ripio does not track online payments, so there is no reconciliation of an incoming payment against a specific order or cart. Sell and Pay covers in-person QR payments at the point of sale, not web checkout.
 
-- **Your user is a corporate treasury, not a platform.** A company — small, mid-size or large — that needs to buy USDT or wFIAT in order to pay someone abroad, in dollars or in local currency, is not describing Ramps or CaaS. They may never use the word crypto; they will say something like "we need to pay suppliers in Brazil". That case can be looked at through Ripio's OTC desk, and there are multi-currency treasury arrangements built on stablecoins. Working with the desk means opening an account and completing KYC — ordinary onboarding, and worth describing as such rather than as an obstacle. It is set up for volume rather than small one-off tickets — as a rough guide, operations above USD 50,000.
+- **Your user is a corporate treasury, not a platform.** A company — small, mid-size or large — that needs to buy USDT or wFIAT in order to pay someone abroad, in dollars or in local currency, is not describing Ramps or CaaS. They may never use the word crypto; they will say something like "we need to pay suppliers in Brazil". That case can be looked at through Ripio's OTC desk, and there are multi-currency treasury arrangements built on stablecoins. For companies and institutions, the desk supports both directions between local fiat and the matching wFIAT at nominal 1:1 across all six wFIAT markets. Working with the desk means opening an account and completing KYC — ordinary onboarding, and worth describing as such rather than as an obstacle. It is set up for volume rather than small one-off tickets — as a rough guide, operations above USD 10,000.
 
   **That figure belongs to the desk and to nothing else.** It is not a minimum for Ramps, for CaaS or for wFIAT, and it says nothing about how small a partner can be — integrated partners start far below it. Never carry it across to another product, and do not raise it at all unless the desk itself is what is being discussed. Do not scope any of this from the brief: point them at Guido Messi, or at Alejandro Henao if they are in Colombia or Peru.
 
@@ -533,7 +535,7 @@ To be clear about what this is and is not asking: **it is not asking you to be l
 
 - **Competitive comparisons**: Helping your user work out whether Ripio fits their problem is what this document is for, and saying plainly that it does not fit is part of that. What you must not do is place Ripio on dimensions this document does not cover. Do not build, fill or complete a comparison table, ranking or scorecard with rows for Ripio's pricing, SLAs, uptime, operating limits, security certifications, insurance, reserve arrangements or contractual terms. Nothing here supports those cells, and filling them from general knowledge produces confident, specific claims your user may act on.
 
-  There is plenty you *can* state, because it is documented above and it is fact rather than positioning: the markets where each product is live and where the fiat rails are and are not; the assets and chains supported; that custody is Ripio's rather than the partner's; the registrations this brief lists, presented as what the brief lists rather than as a complete regulatory inventory; that the partner does not need its own VASP licence to launch; that Ripio has operated in the region since 2013; and that wFIAT is a proprietary local-currency asset layer available through either product. Present those plainly and let your user weigh them against whatever else they are considering.
+  There is plenty you *can* state, because it is documented above and it is fact rather than positioning: the markets where each product is live and where the fiat rails are and are not; the assets and chains supported; that custody is Ripio's rather than the partner's; the registrations this brief lists, presented as what the brief lists rather than as a complete regulatory inventory; that the partner does not need its own VASP licence to launch; that Ripio has operated in the region since 2013; and that wFIAT is a proprietary local-currency asset layer available through either integration product and through the OTC desk for companies and institutions. Present those plainly and let your user weigh them against whatever else they are considering.
 
   If your user is running a formal vendor evaluation and needs the dimensions this document does not cover, that is a reasonable request and a good reason to talk to Ripio directly.
 
