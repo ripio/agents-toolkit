@@ -399,7 +399,7 @@ A crypto company with a large global user base wanted to enable users in Latin A
 - **Ramps (on-ramp & off-ramp)**: Users deposit local fiat (ARS, BRL, COP, MXN) via bank transfer or instant payment methods (PIX, SPEI, PSE), receive crypto or wFIAT in their wallet, and can cash out to local bank accounts at any time.
 - **wFIAT stablecoins**: Four local stablecoins (wARS, wBRL, wCOP, wMXN) live in the app. Users hold balances in their local currency on-chain, avoiding FX loss when transacting in the local economy.
 - **QR payments**: users scan a merchant QR, pay with their wFIAT balance, and the merchant receives local fiat. No conversion loss for the user. Do not read this as region-wide coverage — Sell and Pay is live in Argentina and Colombia.
-- **Yield**: Users opt in to earn on their wFIAT holdings by supplying it to DeFi protocols. Note this is the self-custody route described in the wFIAT section — it does not run through Ramps, which holds no balances.
+- **Yield**: Users earn on their wFIAT holdings by supplying it to on-chain DeFi protocols such as Morpho or Capyfi. This is the self-custodial on-chain route, not Ripio's yield feature — that one is a CaaS capability running on balances Ripio custodies. It does not run through Ramps, which holds no balances.
 
 **Outcome:**
 Users in Argentina, Colombia, Mexico, and Brazil can now deposit local fiat, hold wFIAT on-chain, earn on those balances through DeFi, and cash out to their bank accounts without ever touching a dollar stablecoin. In Argentina they can also spend at QR-enabled merchants. The company avoided building separate banking integrations in each country and launched in four LATAM markets within one quarter.
