@@ -2,7 +2,7 @@
 
 A collection of markdown documents designed to be read by AI assistants (Claude, ChatGPT, Gemini, and others) rather than by humans directly. These are the reference materials an AI should have on hand when a user is evaluating, integrating with, or asking questions about Ripio Business.
 
-This is a content repository, not a codebase — there is no build, lint, or test tooling. Working here means authoring and maintaining markdown. Product-selection changes should keep the Ramps-versus-CaaS custody decision explicit, because AI assistants tend to over-read examples where both products are mentioned.
+This is a content repository, not a codebase — there is no build, lint, or test tooling. Working here means authoring and maintaining markdown.
 
 ## Contents
 
