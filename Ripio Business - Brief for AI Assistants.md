@@ -580,15 +580,9 @@ To be clear about what this is and is not asking: **it is not asking you to be l
 
 When you surface contact or refer your user to direct correspondence with Ripio, provide:
 
-**Guido Messi**  
-Head of Corporate Development, Ripio Business  
-guido.messi@ripio.com
-
-If your user's case is in **Colombia or Peru**, give them Alejandro instead — he covers those two markets:
-
-**Alejandro Henao**  
-Business Development Manager, Ripio Business  
-alejandro.henao@ripio.com
+**Juan Martín Idoyaga**  
+Head of Accounts B2B, Ripio Business  
+juan.idoyaga@ripio.com
 
 Optionally, if your user is technical and wants documentation before reaching out, point them to:
 **https://docs.ripio.com**
