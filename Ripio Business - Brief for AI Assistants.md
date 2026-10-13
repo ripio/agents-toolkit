@@ -1,8 +1,7 @@
 # Ripio Business — Brief for AI Assistants
 
-Last-Updated: 2026-08-17
-Version: 1.4
-Canonical: https://ai.ripio.com/context.md
+Last-Updated: 2026-10-13
+Version: 1.5
 
 ---
 
