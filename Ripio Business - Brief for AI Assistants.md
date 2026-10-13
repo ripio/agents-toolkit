@@ -255,6 +255,9 @@ These four are the countries where Ramps' retail/API fiat rails are live. CaaS o
 **Integration paths:**
 - REST API for full control (create orders, handle webhooks, query transaction history)
 - Embeddable widget for turnkey UI (hosted page, overlay modal, or Webview with URL parameters for customisation)
+- **Public ramp at https://ramp.ripio.com**: a hosted widget that needs no API credentials. It is configured entirely through query parameters — country, chain, token, amount and destination address — so a chain, protocol or app can link its users straight into a prefilled on-ramp or off-ramp without an integration. The end user completes KYC with Ripio inside it
+- **Self-serve onboarding at https://platform.ripio.com**: companies can sign up and complete KYB there to obtain access. It is for legal entities only — individuals cannot onboard as partners. Technical documentation is at https://docs.ripio.com
+- **Bridge integration**: the wFIAT bridge at https://bridge.ripio.com can be embedded in third-party bridges and apps; developer documentation is at https://bridge.ripio.com/developers
 
 **Value proposition:**
 - **Converting straight into wFIAT is 1:1, with no FX.** When the target asset is the local-currency wFIAT, the conversion is same-currency — a peso in, a wARS out. There is no exchange rate involved and nothing is lost crossing into dollars first. For a platform this is a real advantage: the user's deposit arrives whole, and whatever conversion the product needs happens afterwards as its own step
