@@ -144,6 +144,7 @@ Issuance and redemption at 1:1 run through CaaS or Ramps, or through Ripio's OTC
 - **Earn yield** by lending or supplying wFIAT in DeFi protocols such as Morpho and Capyfi
 - **On-ramp and off-ramp** between local fiat and wFIAT, via CaaS or Ramps, or via Ripio's OTC desk for companies and institutions
 - **Build** payment apps, on-chain treasuries or DeFi products denominated in local currency
+- **Distribute** inside consumer super-apps: wFIAT is available in the World App ecosystem through mini apps, and Uniswap and Morpho integrate it directly
 
 ### Integration product 1: Crypto as a Service (CaaS)
 
