@@ -214,7 +214,7 @@ Fiat-to-crypto and crypto-to-fiat conversion infrastructure for any company that
 
 **What it delivers:**
 
-- **On-ramp**: convert local fiat (ARS, BRL, MXN, COP) into crypto via bank transfer or instant payment methods (PIX, SPEI, PSE). **The delivery asset and network are configured by the partner**, and the well-established networks and tokens can be integrated — including USDT on Tron, which is the dominant stablecoin rail for LATAM retail. A useful rule of thumb: if an asset exists in the Ripio consumer app, it can be made available to a partner. So treat asset and chain coverage as a configuration question rather than a constraint
+- **On-ramp**: convert local fiat (ARS, BRL, MXN, COP) into crypto via bank transfer or instant payment methods (PIX, SPEI, PSE, Bre-B). **The delivery asset and network are configured by the partner**, and the well-established networks and tokens can be integrated — including USDT on Tron, which is the dominant stablecoin rail for LATAM retail. A useful rule of thumb: if an asset exists in the Ripio consumer app, it can be made available to a partner. So treat asset and chain coverage as a configuration question rather than a constraint
 - **Real-time settlement**: Converted funds are credited immediately, in every market where Ramps is live, and the same applies to crypto swaps. No batch window, no next-day settlement. For a partner whose problem is funnel drop-off, this is the part that matters most and it is easy to skip past
 - **Once a trade happens it is final**: money still sitting in the virtual account can be reversed, but once it has been converted the operation cannot be undone. Worth stating early to a partner who asks about reversals, because it tells them exactly where their exposure window opens and closes
 - **Off-ramp**: convert crypto to local fiat and send it to a fiat account — **the end user's own, or a third party's**. That second case is a whole category rather than a detail: it is what makes payouts possible, where a partner pays a contractor, a seller or a recipient who is not the account holder. **The exception is Mexico, where off-ramp must go to an account in the end user's own name.** If your user's payout case runs through Mexico, say that plainly rather than letting them design around something that does not exist there
@@ -244,7 +244,7 @@ Fiat-to-crypto and crypto-to-fiat conversion infrastructure for any company that
 
 **Supported countries and payment methods:**
 - **Argentina**: bank transfer (CVU/CBU/alias, including Mercado Pago) (on-ramp and off-ramp)
-- **Brazil**: PIX (on-ramp and off-ramp)
+- **Brazil**: PIX, including a PIX key as the deposit account (on-ramp and off-ramp)
 - **Mexico**: bank transfer (CLABE / SPEI) (on-ramp and off-ramp)
 - **Colombia**: bank transfer (PSE), Bre-B, Request-to-Pay (Bancolombia, Nequi) (on-ramp) | bank transfer (PSE), Bre-B (off-ramp)
 
